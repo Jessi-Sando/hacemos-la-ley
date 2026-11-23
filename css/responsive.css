@@ -1,0 +1,51 @@
+/* =====================================================================
+   HACEMOS LA LEY — Ajustes responsive
+   ===================================================================== */
+@media (max-width: 1100px) {
+  .roles { grid-template-columns: repeat(3, 1fr); }
+  .ficha-grid { grid-template-columns: repeat(2, 1fr); }
+  .stages { grid-template-columns: repeat(3, 1fr); }
+  .decisions { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  .split, .split.wide-left, .twocol { grid-template-columns: 1fr; }
+  .task.sticky { position: static; max-height: none; }
+  .hero { grid-template-columns: 1fr; min-height: auto; padding: 0 0 2rem; }
+  .hero::before { display: none; }
+  .hero-left { position: relative; width: 100%; height: auto; order: -1; }
+  .hero-photo { height: auto; aspect-ratio: 915 / 740; max-height: 70vh; object-position: center top; -webkit-mask-image: linear-gradient(180deg, #000 0 80%, transparent 100%); mask-image: linear-gradient(180deg, #000 0 80%, transparent 100%); }
+  .hero-right { grid-column: 1; margin-top: -3rem; }
+  .navbtn span { display: none; }
+  .navbtn { padding: .55rem; }
+  #btn-expediente span { display: inline; }
+  .progress .pl { display: none; }
+  .progress li { min-width: 44px; }
+  .progress li.cur .pl { display: inline; }
+  .progress li.cur { flex: 3 1 auto; }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  .topbar { padding: .6rem .8rem 1.3rem; }
+  .brand-tag { display: none; }
+  .brand-mark { font-size: 1.1rem; }
+  .roles { grid-template-columns: 1fr; }
+  .ficha-grid { grid-template-columns: 1fr; }
+  .stages { grid-template-columns: repeat(2, 1fr); }
+  .stagecard, .task, .paper { padding: 1rem; }
+  .paper-label { padding: 1rem 1.2rem .6rem; }
+  .btn.cta { font-size: 1.2rem; }
+  .row.between { flex-direction: column-reverse; align-items: stretch; }
+  .row.between .btn { width: 100%; }
+  body { padding-bottom: 60px; }
+  .simbar { font-size: .82rem; padding: .4rem .8rem; gap: .6rem; }
+  .simbar-text { display: none; }
+  .simbar-short { display: inline; }
+  .simbar-badge { padding-right: .6rem; }
+  .toast { bottom: 70px; border-radius: 14px; }
+  .docs { grid-template-columns: 1fr; }
+  .progress li.cur .pl { display: none; }
+  .progress li.cur { flex: 1 1 0; }
+  .progress a, .progress li > span { justify-content: center; padding: .45rem .3rem; }
+}
